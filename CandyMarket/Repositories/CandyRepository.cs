@@ -17,7 +17,6 @@ namespace CandyMarket.Api.Repositories
         {
             using (var db = new SqlConnection(_connectionString))
             {
-
                 var candies = db.Query<Candy>("Select * from Candy");
                 return candies.ToList();
             }
